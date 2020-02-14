@@ -92,6 +92,10 @@ int main()
           {
               cout<<p1<<" Enter block number:";
               cin>>x;
+              while(ar[x-1]=='O'||ar[x-1]=='X'||x<1||x>9){
+                  cout<<"\nChoosen wrong block. Enter another block again:";
+                  cin>>x;
+              }
               ar[x-1]='X';
               p=0;
           }
@@ -99,6 +103,10 @@ int main()
           {
               cout<<p2<<" Enter block number:";
               cin>>x;
+              while(ar[x-1]=='O'||ar[x-1]=='X'||x<1||x>9){
+                  cout<<"\nChoosen wrong block. Enter another block again:";
+                  cin>>x;
+              }
               ar[x-1]='O';
               p=1;
           }
@@ -129,4 +137,5 @@ int main()
         cout<<p2<<" won the game.";
     else
         cout<<"Game is a tie.";
+    return 0;
 }
